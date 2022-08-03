@@ -1,13 +1,13 @@
 try {
     require('dotenv').config();
-}catch (e) {
-    
+} catch (e) {
+
     console.log('in production...');
 
 } finally {
 
     const GenRandomMessage = require('./modules/randomMessage/randomMessages');
-    const {MessageEmbed} = require('discord.js');
+    const { MessageEmbed } = require('discord.js');
 
     module.exports = async (client, member) => {
 
@@ -16,30 +16,22 @@ try {
 
         if (member.guild == discordServer) {
 
-            const username = member.user.username;
-            const profilePicUrl = member.user.displayAvatarURL({
-                dynamic: true,
-                format: 'png',
-                size: 1024
-            });
+            const username = member.id;
+            const profilePicUrl = member.user.displayAvatarURL({ dynamic: true, format: 'png', size: 1024 });
             const message = await new GenRandomMessage(username).getRandomMessage();
 
             const embed = new MessageEmbed({
-                title: ':partying_face: Opa!! :partying_face:', // lar
+                title: ':partying_face: Uhull!! :partying_face:',
                 description: message,
-                thumbnail: {
-                    url: profilePicUrl
-                },
+                thumbnail: { url: profilePicUrl },
                 color: "#6a0bd9",
                 footer: {
-                    text: 'Bem vindo ao servidor! Sinta-se à vontade para apresentar suas ideias e quem você é!'
+                    text: 'Bem vindo ao servidor! Insira o cupom abaixo na [nossa loja](https://shopee.com.br/minhastack?categoryId=100644&itemId=16403580069) e receba 5% OFF em qualquer produto :partying_face: \n\nMINH5OFF'
                 }
             });
 
             const parseEmbed = embed.toJSON();
-            channel.send({
-                embeds: [parseEmbed]
-            });
+            channel.send({embeds: [parseEmbed]});
         }
     }
 

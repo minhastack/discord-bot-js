@@ -9,6 +9,6 @@ client.login(token).then(()=>{
     client.on("guildMemberAdd", async member => app(client, member));
     
     client.on("ready", ()=> console.log('client is ready!'));
-
+    
 });
 

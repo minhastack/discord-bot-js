@@ -7,6 +7,7 @@ class GenRandomMessage {
     randomNumber = (max, min) => Math.floor(Math.random() * (max - min + 1)) + min;
     
     getMessages = async () => {
+
         return [
             `Olha quem finalmente chegou, pessoal! \n Sinta-se à vontade @${this.username}!!`,
 
@@ -14,13 +15,13 @@ class GenRandomMessage {
 
             `Entrou no grupo o próximo gênio de uma geração: ${this.username}`, 
 
-            `@${this.username} embarcou no foguete, seja bem vindo(a)!`,
+            `<@${this.username}> embarcou no foguete, seja bem vindo(a)!`,
 
-            `@${this.username} colou com a gente, agora o grupo anda hehe`,
+            `<@${this.username}> colou com a gente, agora o grupo anda hehe`,
 
-            `@${this.username} chegou junto galera!`,
+            `<@${this.username}> chegou junto galera!`,
             
-            `@${this.username}, sinta-se em casa!`
+            `<@${this.username}>, sinta-se em casa!`
         ];
     }
 
