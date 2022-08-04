@@ -25,9 +25,8 @@ try {
                 description: message,
                 thumbnail: { url: profilePicUrl },
                 color: "#6a0bd9",
-                footer: {
-                    text: 'Bem vindo ao servidor! Insira o cupom abaixo na [nossa loja](https://shopee.com.br/minhastack?categoryId=100644&itemId=16403580069) e receba 5% OFF em qualquer produto :partying_face: \n\nMINH5OFF'
-                }
+                description: \n\n\n'Insira o cupom abaixo na [nossa loja](https://shopee.com.br/minhastack?categoryId=100644&itemId=16403580069) e receba 5% OFF em qualquer produto :partying_face: \n\nMINH5OFF'
+                
             });
 
             const parseEmbed = embed.toJSON();
