@@ -26,7 +26,7 @@ class GenRandomMessage {
     }
 
     getRandomMessage = async () => {
-        const AllMessages = await this.getMessages(this.username);
+        const AllMessages = await this.getMessages();
         let result;
         
         const min = 0;
