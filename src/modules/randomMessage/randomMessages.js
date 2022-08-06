@@ -9,11 +9,11 @@ class GenRandomMessage {
     getMessages = async () => {
 
         return [
-            `Olha quem finalmente chegou, pessoal! \n Sinta-se à vontade @${this.username}!!`,
+            `Olha quem finalmente chegou, pessoal! \n Sinta-se à vontade <@${this.username}>!!`,
 
-            `Mais uma pessoa no grupo, finalmente. \n Seja bem vindo(a) @${this.username}`,
+            `Mais uma pessoa no grupo, finalmente. \n Seja bem vindo(a) <@${this.username}>`,
 
-            `Entrou no grupo o próximo gênio de uma geração: ${this.username}`, 
+            `Entrou no grupo o próximo gênio de uma geração: <@${this.username}>`, 
 
             `<@${this.username}> embarcou no foguete, seja bem vindo(a)!`,
 
